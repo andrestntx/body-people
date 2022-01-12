@@ -31,6 +31,14 @@ header img#logo {
     inline-size: 160px;
 }
 
+header img.lines-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    inline-size: 40%;
+}
+
 header section#social {
     padding-block-start: 6px;
     display: flex;
@@ -107,6 +115,10 @@ header section#social img {
     position: absolute;
 }
 
+img.svg-bg {
+    position: absolute;
+}
+
 #selling .hero-image img.dots {
     top: 42%;
     right: 2%;
@@ -172,8 +184,10 @@ Benefits section
 
 .section-title img.arrows {
     margin: auto;
-    top: 60%;
+    top: 65%;
     z-index: 1;
+    inline-size: 25px;
+    block-size: 25px;
 }
 
 #benefits .benefits-title {
@@ -183,16 +197,42 @@ Benefits section
 
 #benefits article {
     position: relative;
-    background-color: var(--tertiary-200);
+    background-color: var(--tertiary);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
+#benefits article .benefit-title {
+    position: relative;
+    padding-block: 20px;
+    padding-inline: 30px;
+}
+
+#benefits article .benefit-title img {
+    position: absolute;
+    inline-size: 30px;
+}
+
+#benefits article .benefit-title img.mark-left {
+    top: 0;
+    left: 0;
+}
+
+#benefits article .benefit-title img.mark-right {
+    bottom: 0;
+    right: 0;
+}  
+
+#benefits article#control .benefit-title {
+    padding-inline-end: 0px;
+}
+
 #benefits article .content {
-    padding-block-start: 270px;
+    padding-block-start: 285px;
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
+    display: flex;
 }
 
 #benefits article .content h1 {
@@ -200,9 +240,9 @@ Benefits section
     font-style: italic;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.3em;
-    padding-block-end: 20px;
+    margin: 0px;
 }
 
 #benefits article .content h1 span.intro {
@@ -230,11 +270,11 @@ Benefits section
 }
 
 #benefits article#personalized {
-    background-image: url('../images/beneficio_1.png');
+    background-image: url('../images/benefits_image_new.png');
 }
 
 #benefits article#control {
-    background-image: url('../images/beneficio_2.png');
+    background-image: url('../images/control_image_new.png');
 }
 
 #benefits article#diet {
@@ -257,9 +297,9 @@ Benefits section
 }
 
 #benefits article:nth-child(n + 4)::before {
-    border-top: 2px solid var(--tertiary-200);
-    border-left: 50vw solid var(--tertiary-200);     
-    border-right: 50vw solid var(--tertiary-200);
+    border-top: 2px solid var(--tertiary);
+    border-left: 50vw solid var(--tertiary);     
+    border-right: 50vw solid var(--tertiary);
 }
 
 #benefits article:last-of-type::after {
@@ -271,7 +311,7 @@ Benefits section
     right: 0;
     margin: auto;
     z-index: 2;
-    border-top: 74px solid var(--tertiary-200);
+    border-top: 74px solid var(--tertiary);
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
 }
@@ -444,6 +484,21 @@ section#plans {
     padding-block: 40px;
     padding-inline: 5%;
     position: relative;
+    background-image: url('../images/svg/crossed_lines_brown.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#plans img.svg-bg.arrows-down {
+    top: 15px;
+    right: 5%;
+    inline-size: 35px;
+} 
+
+.section-title.plans-title img.arrows {
+    top: 58%;
+    inline-size: 22px;
+    block-size: 22px;
 }
 
 section#plans::after {
@@ -724,11 +779,11 @@ section#gallery p {
     font-weight: 300;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 650px) {
     body {
         background-image: url('../images/bg_home.jpeg');
         background-color: rgba(172, 172, 172, 0.876);
-        max-width: 800px;
+        max-width: 650px;
         position: relative;
         margin:auto;
     }
@@ -741,8 +796,8 @@ section#gallery p {
     #benefits article:nth-child(n + 4)::before,
     #benefits article:last-of-type::after,
     section#plans::after  {
-        border-left-width: 400px;
-        border-right-width: 400px;
+        border-left-width: 325px;
+        border-right-width: 325px;
     }
 
     #benefits article {
@@ -750,6 +805,6 @@ section#gallery p {
     }
 
     #benefits .benefit-step-content {
-        max-inline-size: 400px;
+        max-inline-size: 325px;
     }
  }

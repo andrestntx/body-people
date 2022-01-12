@@ -1,0 +1,752 @@
+:root {
+    --font: 'Montserrat';
+    --primary: #ed3336;;
+    --secondary: #FFFFFF;
+    --secondary-100: #ffffffd7;
+    --secondary-200: #dddddd;
+
+    --tertiary: black;
+    --tertiary-100: #1e1e1e75;
+    --tertiary-200: #363435;
+  }
+
+body {
+    font-family: var(--font), sans-serif;
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-inline: 0px;
+    margin-block: 0;
+}
+
+header {
+    block-size: auto;
+    padding-block: 25px;
+    padding-inline: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+header img#logo {
+    inline-size: 160px;
+}
+
+header section#social {
+    padding-block-start: 6px;
+    display: flex;
+    justify-content: space-around;
+    inline-size: 66px;
+}
+
+header section#social img {
+    block-size: 25px;
+}
+
+#selling {
+    padding-inline: 2%;
+    padding-block-start: 30px;
+}
+
+#selling h1, h2 {
+    font-weight: normal;
+    margin: 0;
+}
+
+#selling .quote {
+    border-radius: 0;
+    border-inline-start: 5px solid var(--secondary-100);
+    padding-inline-start: 10px;
+    padding-block: 0px;
+
+    margin-inline-start: 3%;
+    margin-block-end: -30px;
+}
+
+#selling h1 {
+    text-transform: uppercase;
+    line-height: 22px;
+    font-size: 21px;
+}
+
+#selling h2 {
+    text-align: center;
+    line-height: 22px;
+    font-size: 15px;
+}
+
+#selling h2 span:nth-child(1) {
+    font-weight: 500;
+}
+
+#selling h2 span:nth-child(3) {
+    font-weight: 700;
+    font-size: 16px;
+    font-style: oblique;
+}
+
+#selling h2 span:nth-child(5) {
+    line-height: 26px;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+#selling h1 span {
+    font-weight: 800;
+}
+
+#selling .hero-image {
+    position: relative;
+}
+
+#selling .hero-image img {
+    inline-size: 100%;
+}
+
+#selling .hero-image img.svg-bg {
+    inline-size: auto;
+    position: absolute;
+}
+
+#selling .hero-image img.dots {
+    top: 42%;
+    right: 2%;
+}
+
+#selling .hero-image img.arrows {
+    top: 80%;
+    left: 10%;
+}
+
+/*
+Benefits section
+*/
+
+#benefits {
+    position: relative;
+    margin-block-start: 50px;
+    margin-block-end: 74px;
+}
+
+#benefits #svg-bg-dots {
+    background-image: url('/assets/images/svg/dots_three_lines.svg');
+    background-size: cover;
+    background-repeat: repeat-y;
+    inline-size: 45px;
+    block-size: 80px;
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 15px;
+}
+
+.section-title {
+    position: relative;
+    block-size: 120px;
+}
+
+.section-title h1, .section-title .circle, .section-title img.arrows {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.section-title .circle {
+    inline-size: 120px;
+    block-size: 120px;
+    background: var(--tertiary);
+    border-radius: 50%;
+    margin: auto;
+    z-index: 0;
+}
+
+.section-title h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 25px;
+    top: 30%;
+    margin: 0;
+    text-shadow: 2px 2px var(--tertiary-100);
+    z-index: 1;
+}
+
+.section-title img.arrows {
+    margin: auto;
+    top: 60%;
+    z-index: 1;
+}
+
+#benefits .benefits-title {
+    margin-block-end: -60px;
+    z-index: 2;
+}
+
+#benefits article {
+    position: relative;
+    background-color: var(--tertiary-200);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#benefits article .content {
+    padding-block-start: 270px;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#benefits article .content h1 {
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.3em;
+    padding-block-end: 20px;
+}
+
+#benefits article .content h1 span.intro {
+    line-height: 1.8em;
+}
+
+#benefits article .content h1 span.primary-bold {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+#benefits article .content h1 span.secondary-focus {
+    text-transform: none;
+    font-style: oblique;
+    font-size: 1.6em;
+}
+
+#benefits article .content p {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    text-align: center;
+    padding-inline: 12%;
+}
+
+#benefits article#personalized {
+    background-image: url('../images/beneficio_1.png');
+}
+
+#benefits article#control {
+    background-image: url('../images/beneficio_2.png');
+}
+
+#benefits article#diet {
+    background-image: url('../images/beneficio_3.png');
+}
+
+#benefits article::before {
+    position:absolute;
+    content: '';
+    block-size: 0;
+    inline-size: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-top: 2px solid var(--primary);
+    border-bottom: 74px solid transparent;
+    border-left: 50vw solid var(--primary);     
+    border-right: 50vw solid var(--primary);
+    z-index: 1;
+}
+
+#benefits article:nth-child(n + 4)::before {
+    border-top: 2px solid var(--tertiary-200);
+    border-left: 50vw solid var(--tertiary-200);     
+    border-right: 50vw solid var(--tertiary-200);
+}
+
+#benefits article:last-of-type::after {
+    content: '';
+    position: absolute;
+    block-size: 0;
+    inline-size: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    border-top: 74px solid var(--tertiary-200);
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+}
+
+#benefits img.divider {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -10px;
+}
+
+#benefits article .content ul {
+    padding: 30px 0px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#benefits article .content li {
+    padding-block: 8px;
+    display: flex;
+}
+
+#benefits .benefit-step-content {
+    inline-size: 75vw;
+}
+
+#benefits .benefit-step-icon {
+    margin-right: 16px;
+    position: relative;
+}
+
+#benefits li:last-of-type .benefit-step-icon::before {
+    content: none;
+}
+
+#benefits .benefit-step-icon::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    display: block;
+    background: var(--secondary);
+    inset: -8px 0px -48px;
+    margin: 10px auto;
+}
+
+#benefits .benefit-step-icon .step-icon {
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    background-color: var(--tertiary-200);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+#benefits .benefit-step-icon .step-icon img {
+    inline-size: 35px;
+    block-size: 35px;
+}
+
+#benefits article .content ul li h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#benefits article .content ul li p {
+    font-size: 13px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/*
+Personal brand section
+*/
+
+section#personal-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 5% 20px 5%;
+}
+
+section#personal-brand .quote {
+    position: relative;
+    background-color: var(--secondary);
+    color: var(--tertiary-100);
+    padding: 12px;
+    border-radius: 10px;
+    margin-block-end: 10px;
+    font-style: oblique;
+    font-size: 15px;
+}
+
+section#personal-brand .quote::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid var(--secondary);
+    border-left: 10px solid var(--secondary);
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    bottom: -20px;
+    left: 65%;
+}
+
+section#personal-brand .quote-mark-photo {
+    border-radius: 50%;
+    border: 1px solid white;
+    max-width: 150px;
+    padding: 5px;
+    margin: auto;
+}
+
+section#personal-brand .quote-photo {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid white;
+    max-inline-size: 150px;
+    max-block-size: 150px;
+    margin: auto;
+}
+
+section#personal-brand .quote-photo img {
+    inline-size: 100%;
+    block-size: auto;
+}
+
+section#personal-brand .quote-profile {
+    text-align: center;
+    max-inline-size: 300px;
+}
+
+section#personal-brand .quote-profile p {
+    padding-block-start: 5px;
+    color:var(--tertiary);
+    margin: 0;
+    font-style: oblique;
+    font-weight: 600;
+}
+
+section#personal-brand .quote-profile p.description {
+    padding-block-start: 3px;
+    color:var(--secondary);
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+section#personal-brand .quote-profile p.description span {
+    font-weight: 500;
+}
+
+
+/*
+Plans section
+*/
+
+section#plans {
+    padding-block: 40px;
+    padding-inline: 5%;
+    position: relative;
+}
+
+section#plans::after {
+    content: '';
+    position: absolute;
+    block-size: 0;
+    inline-size: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    border-top: 45px solid var(--primary);
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    bottom: -45px;
+}
+
+#plans .plans-letter {
+    padding-block-start: 20px;
+}
+
+#plans .plans-title h1 {
+    font-size: 35px;
+    top: 20%;
+}
+
+#plans .section-title .circle {
+    inline-size: 100px;
+    block-size: 100px;
+}
+
+#plans .tabs {
+    display: block;
+    position: relative;
+}
+
+#plans .tabs button {
+    inline-size: 34%;
+    position: absolute;
+    text-transform: uppercase;
+    font-style: oblique;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    padding-block: 5px;
+    top: -20px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#plans .tabs button:nth-of-type(1) {
+    color: var(--tertiary);
+    background-color: var(--secondary-200);
+    border-color: var(--secondary);
+    border-bottom-color: var(--secondary-200);
+    z-index: 3;
+}
+
+#plans .tabs button:nth-of-type(2) {
+    left: 33%;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    border-color: var(--tertiary);
+    z-index: 2;
+}
+
+#plans .tabs button:nth-of-type(2).active {
+    left: 32%;
+}
+
+#plans .tabs button:nth-of-type(3) {
+    left: 66%;
+    background-color: var(--primary);
+    border-bottom-color: var(--primary);
+    color: var(--secondary);
+    z-index: 1;
+}
+
+#plans .tabs button:nth-of-type(3).active {
+    left: 64%;
+}
+
+#plans .tabs button.active {
+    z-index: 4; 
+    inline-size: 36%; 
+    padding-block-start: 10px;
+    top: -25px;
+}
+
+#plans .tabs button img {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+
+#plans .tabs button.active img {
+    display: initial;
+}
+
+
+#plans .content {
+    background-color: var(--secondary);
+    border-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 35px 5% 10px 5%;
+}
+
+#plans .content article {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#plans .content article.active {
+    display: flex;
+}
+
+#plans .content article .before {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--tertiary-200);
+    padding-block: 10px;
+    line-height: 1em;
+}
+
+#plans .content article .before p {
+    margin: 0;
+}
+
+#plans .content article .before .price { 
+    position: relative;
+    color: #c5c5c5;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+#plans .content article .before .price::after{
+    content: "";
+    width: 140%;
+    height: 2px;
+    background: var(--tertiary-200);
+    position: absolute;
+    bottom: 10px;
+    left: -20%;
+    margin: auto;
+    transform: rotate(-4deg);
+}
+
+#plans .content article .now {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--tertiary-200);
+    text-transform: uppercase;
+    padding-block-end: 15px;
+}
+
+#plans .content article .now .price {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+#plans .content article .subscribe {
+    position: relative;
+    padding-block: 6px;
+    z-index: 0;
+}
+
+#plans .content article .subscribe button {
+    background-color: var(--secondary-200);
+    border-width: 0;
+    border-radius: 7px;
+    padding: 9px 14px;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+}
+
+#plans .content article#black-content .subscribe button {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+#plans .content article#premium-content .subscribe button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-style: italic;
+    font-weight: 600;
+}
+
+#plans .content article .subscribe .mark {
+    height: 1px;
+    background-color: var(--secondary-200);
+    content: '';
+    left: -20%;
+    right: 0;
+    position: absolute;
+    width: 140%;
+    bottom: 20px;
+}
+
+
+#plans ul.included li {
+    list-style-image: url('../images/svg/included_icon.svg');
+    color: var(--tertiary-200);
+    font-weight: 300;
+    padding-block: 6px;
+    font-size: 15px;
+}
+
+#plans ul.included li.not-included {
+    list-style-image: url('../images/svg/not_included_icon.svg');
+    color: var(--tertiary-100);
+}
+
+/*
+Gallery section
+*/
+
+section#gallery {
+    background-image: url('../images/bg_home.jpeg');
+    background-size: contain;
+    background-color: var(--tertiary-200);
+    color: var(--secondary);
+    padding-block-start: 100px;
+    text-align: center;
+}
+
+section#gallery img.logo {
+    border-radius: 50%;
+    inline-size: 80px;
+    block-size: 80px;
+}
+
+section#gallery .content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-block: 30px;
+}
+
+section#gallery .content img {
+    inline-size: 50%;
+}
+
+section#gallery h1 {
+    margin: 0.1em 0;
+    font-size: 15px;
+    color: var(--secondary);
+    font-style: oblique;
+    font-weight: 400;
+}
+
+section#gallery a {
+    color: var(--secondary);
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+section#gallery p {
+    padding-block: 10px;
+    padding-block-end: 40px;
+    color: var(--secondary);
+    font-size: 14px;
+    max-inline-size: 300px;
+    margin: auto;
+    font-weight: 300;
+}
+
+@media (min-width: 800px) {
+    body {
+        background-image: url('../images/bg_home.jpeg');
+        background-color: rgba(172, 172, 172, 0.876);
+        max-width: 800px;
+        position: relative;
+        margin:auto;
+    }
+
+    main, header {
+        background-color: var(--primary);
+    }
+
+    #benefits article::before, 
+    #benefits article:nth-child(n + 4)::before,
+    #benefits article:last-of-type::after,
+    section#plans::after  {
+        border-left-width: 400px;
+        border-right-width: 400px;
+    }
+
+    #benefits article {
+        background-size: cover;
+    }
+
+    #benefits .benefit-step-content {
+        max-inline-size: 400px;
+    }
+ }

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body People</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/bdicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
+
+    <script>
+        removeActive = function() {
+            $('#plans .tabs button').removeClass('active');
+            $('#plans .content article').removeClass('active');    
+        };
+
+        $(document).ready(function() {
+            $('button#basic').on('click', event => {                
+                removeActive();
+                $('#basic-content').addClass('active');
+                $('button#basic').addClass('active');
+            });
+
+            $('button#black').on('click', event => {
+                removeActive();
+                $('#black-content').addClass('active');
+                $('button#black').addClass('active');
+            });
+
+            $('button#premium').on('click', event => {
+                removeActive();
+                $('#premium-content').addClass('active');
+                $('button#premium').addClass('active');
+            });
+        });  
+    </script>
+    
+</head>
+<body class="landing-red">
+    <header>
+        <img id="logo" src="./assets/images/svg/logo_nuevo.svg" alt="Nuevo logo Gimnasio Body People 2022">
+        <section id="social">
+            <a href="https://www.instagram.com/gym.bodypeople/" target="_blank">
+                <img src="./assets/images/svg/facebook_icon.svg" alt="Icono facebook blanco">
+            </a>
+            
+            <a href="https://www.facebook.com/gimnasiobodypeople" target="_blank">
+                <img src="./assets/images/svg/instagram_icon.svg" alt="Icono instagram blanco">
+            </a>
+
+        </section>
+    </header>
+    <main>
+        <section id="selling">
+            <div class="quote">
+                <h1>Mejora tu <br> estilo de vida <br> <span>sin sufrimiento</span></h1>
+            </div>
+            
+            <div class="hero-image">
+                <img src="./assets/images/web_04.png" alt="Chica entrenando en el gimnasio body people en villavicencio">
+                <img src = "./assets/images/svg/dots_two_lines.svg" class="svg-bg dots"/>
+                <img src = "./assets/images/svg/arrows_red_light.svg" class="svg-bg arrows"/>
+            </div>
+            
+            <h2>Logra <span>grandes resultados</span> con nuestra<br> <span> guía personalizada y acompañamiento </span><br> <span>sin dientas difíciles</span> </h2>
+        </section>
+        <section id="benefits">
+            <div id="svg-bg-dots">
+
+            </div>
+            <div class="section-title benefits-title">
+                <div class="circle">
+
+                </div>
+                <h1>beneficios</h1>
+                <img src = "./assets/images/svg/arrow_down_premium_tab_icon.svg" class="svg-bg arrows"/>
+                
+            </div>
+            <article id="personalized">
+                <img src = "./assets/images/svg/arrow_divider_grey.svg" class="svg-bg divider"/>
+                <div class="content">
+                    <h1><span class="intro">programa de</span> <br> <span class="primary-bold"> entrenamiento</span> <br> <span class="secondary-focus">personalizado</span></h1>
+                    <p>Contarás un plan de entrenamiento diseñado según tus objetivos y necesidades</p>
+
+                    <ul>
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/hearth_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Adaptación a la actividad física</h2>
+                                <p>Evitaremos lesiones y dolores innecesarios adaptando nuestro cuerpo</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/arm_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Desarrollo múscular</h2>
+                                <p>En el caso de las mujeres enfocaremos la ganancia muscular en piernas y gluteos</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Quema de grasa abdominal</h2>
+                                <p>Junto con la alimentación y circuitos quemaremos la grasa del abdomen</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/hearth_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Tonificación</h2>
+                                <p>Buscaremos que nuestro cuerpo se vea cada vez más estilizado</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                
+            </article>
+            <article id="control">
+                <img src = "./assets/images/svg/arrow_divider_red.svg" class="svg-bg divider"/>
+                <div class="content">
+                    <h1> <span class="primary-bold"> control y seguimiento</span> <br> <span class="secondary-focus">periódico</span></h1>
+                    <p>Evaluaremos tu progreso periodicamente y adaptaremos tu plan según los resultados</p>
+
+                    <ul>
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/hearth_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Valoración de ingreso</h2>
+                                <p>Conoceremos tus objetivos y estilo de vida, para que nuestro plan se adapte a ti</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>% de Grasa y musculatura</h2>
+                                <p>Tomaremos medidas de tu cuerpo que nos permitan evaluar tu progreso</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Control de progreso mensual</h2>
+                                <p>Cada mes haremos control donde evaluemos el plan y sus resultados</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Resultados con nuevas metas</h2>
+                                <p>Ajustaremos el plan de entrenamiento para lograr resultados progresivos</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article id="diet">
+                <img src = "./assets/images/svg/arrow_divider_red.svg" class="svg-bg divider"/>
+                <div class="content">
+                    <h1><span class="intro">no necesitas</span> <br> <span class="primary-bold"> dietas difíciles</span> <br> <span class="secondary-focus">ni castigarte</span></h1>
+                    <p>Recibirás un plan nutricional que se adapte a tu estilo de vida, gustos y objetivos</p>
+
+                    <ul>
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Desintoxicación</h2>
+                                <p>Iniciarás tu plan nutricional limpiando tu sistema digestivo</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Cambios de hábitos saludables</h2>
+                                <p>Lográs reultados muy rápidos con pequeños cambios en tus hábitos</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Cambios permanentes</h2>
+                                <p>No sufrirás efectos rebote ya que no harás cambios extremos en tu alimentación</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="benefit-step-icon">
+                                <div class="step-icon">
+                                    <img src="./assets/images/svg/walker_icon.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit-step-content">
+                                <h2>Enfoque en esarrollo muscular</h2>
+                                <p>Tu plan estará enfocado en cuidar y mejorar tu masa muscular</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section id="personal-brand">
+            <div class="quote">
+                Como instructor y propietario de Body People busco que cumplas tus metas disfruntando de todo el proceso
+            </div>
+            <div class="quote-mark-photo">
+                <div class="quote-photo">
+                    <img src="./assets/images/mariano_pinzon_testimonial.jpeg" alt="Foto de instructor Mariano Pinzon Valencia en Body People Villavicencio">
+                </div>
+            </div>
+            
+            <div class="quote-profile">
+                <p>Mariano Pinzon</p>
+                <p class="description">Entrenador deportivo de la <br> <span>Escuela nacional del deporte</span></p>
+            </div>
+            
+        </section>
+        <section id="plans">
+            <div class="section-title plans-title">
+                <div class="circle">
+
+                </div>
+                <h1>planes</h1>
+                <img src = "./assets/images/svg/arrow_down_premium_tab_icon.svg" class="svg-bg arrows"/>
+                
+            </div>
+            <div class="plans-letter">
+                <div class="tabs">
+                    <button id="basic" class="active" >basic <img src="./assets/images/svg/arrow_down_basic_tab_icon.svg" alt=""></button>
+                    <button id="black" >black <img src="./assets/images/svg/arrow_down_black_tab_icon.svg" alt=""></button>
+                    <button id="premium" >premium <img src="./assets/images/svg/arrow_down_premium_tab_icon.svg" alt=""></button>
+                </div>
+                <div class="content">
+                    <article id="basic-content" class="active">
+                        <div class="before"><p>Antes <br><span class="price">$100.000</span></p></div>
+                        <div class="now"><span class="price">$80.000</span> /MES</div>
+                        <div class="subscribe">
+                            <button>inscribirme a basic</button>
+                            <div class="mark"></div>
+                        </div>
+                        <ul class="included">
+                            <li>Acceso a todas las áreas</li>
+                            <li>Clases grupales semanales</li>
+                            <li>Acompañamiento de instructores profesionales</li>
+                            <li class="not-included">Valoración médica inicial</li>
+                            <li class="not-included">Control mensual</li>
+                            <li class="not-included">Plan de entrenamiento</li>
+                            <li class="not-included">Plan nutricional</li>
+                            <li class="not-included">1 clase personalizada semanal</li>
+                        </ul>
+                    </article>
+                    <article id="black-content" >
+                        <div class="before"><p>Antes <br><span class="price">$400.000</span></p></div>
+                        <div class="now"><span class="price">$250.000</span> /TRIMESTRAL</div>
+                        <div class="subscribe">
+                            <button>inscribirme a black</button>
+                            <div class="mark"></div>
+                        </div>
+                        <ul class="included">
+                            <li>Acceso a todas las áreas</li>
+                            <li>Clases grupales semanales</li>
+                            <li>Acompañamiento de instructores profesionales</li>
+                            <li>Valoración médica inicial</li>
+                            <li>Control mensual</li>
+                            <li>Plan de entrenamiento</li>
+                            <li>Plan nutricional</li>
+                            <li class="not-included">1 clase personalizada semanal</li>
+                        </ul>
+                    </article>
+                    <article id="premium-content">
+                        <div class="before"><p>Antes <br><span class="price">$800.000</span></p></div>
+                        <div class="now"><span class="price">$420.000</span> /SEMESTRAL</div>
+                        <div class="subscribe">
+                            <button>inscribirme a basic</button>
+                            <div class="mark"></div>
+                        </div>
+                        <ul class="included">
+                            <li>Acceso a todas las áreas</li>
+                            <li>Clases grupales semanales</li>
+                            <li>Acompañamiento de instructores profesionales</li>
+                            <li>Valoración médica inicial</li>
+                            <li>Control mensual</li>
+                            <li>Plan de entrenamiento</li>
+                            <li>Plan nutricional</li>
+                            <li>1 clase personalizada semanal</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="gallery">
+            <img src="./assets/images/uis_bp2021.jpeg" alt="Logo instagram Body People" class="logo">
+            <h1>Gimnasio Body People</h1>
+            <a href="https://www.google.com/maps/place/Gimnasio+Body+People/@4.1055102,-73.6341106,17z/data=!3m1!4b1!4m5!3m4!1s0x8e3e2d7a362e4b67:0x59a774c1888efa27!8m2!3d4.1055102!4d-73.6319219" target="_blank">Cr. del Amor, Villavicencio</a>
+            
+            <div class="content">
+                <img src="./assets/images/gallery/1.jpeg" alt="">
+                <img src="./assets/images/gallery/2.jpeg" alt="">
+                <img src="./assets/images/gallery/3.jpeg" alt="">
+                <img src="./assets/images/gallery/4.jpeg" alt="">
+                <img src="./assets/images/gallery/5.jpeg" alt="">
+                <img src="./assets/images/gallery/6.jpeg" alt="">
+                <img src="./assets/images/gallery/7.jpeg" alt="">
+                <img src="./assets/images/gallery/8.jpeg" alt="">
+            </div>
+            
+            <p>Entrando a Multifamiliares desde el anillo vial, en la glorieta después de Amarilo</p>
+
+            <div style="inline-size: 95%; margin: auto;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.580056855126!2d-73.63411058469842!3d4.105510197014822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3e2d7a362e4b67%3A0x59a774c1888efa27!2sGimnasio%20Body%20People!5e0!3m2!1sen!2smx!4v1641934061075!5m2!1sen!2smx" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+        </section>
+    </main>
+    </body>
+</html>

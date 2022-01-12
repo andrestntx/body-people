@@ -620,23 +620,25 @@ section#plans::after {
     z-index: 0;
 }
 
-#plans .content article .subscribe button {
+#plans .content article .subscribe a {
     background-color: var(--secondary-200);
+    color: var(--tertiary);
     border-width: 0;
     border-radius: 7px;
     padding: 9px 14px;
     text-transform: uppercase;
     z-index: 1;
     position: relative;
+    text-decoration: none;
 }
 
-#plans .content article#black-content .subscribe button {
+#plans .content article#black-content .subscribe a {
     background-color: var(--tertiary);
     color: var(--secondary);
     font-weight: 600;
 }
 
-#plans .content article#premium-content .subscribe button {
+#plans .content article#premium-content .subscribe a {
     background-color: var(--primary);
     color: var(--secondary);
     font-style: italic;

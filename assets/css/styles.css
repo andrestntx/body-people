@@ -493,6 +493,7 @@ section#plans::after {
     top: -20px;
     border-style: solid;
     border-width: 1px;
+    font-size: 16px;
 }
 
 #plans .tabs button:nth-of-type(1) {
@@ -530,8 +531,8 @@ section#plans::after {
 #plans .tabs button.active {
     z-index: 4; 
     inline-size: 36%; 
-    padding-block-start: 10px;
-    top: -25px;
+    padding-block-start: 15px;
+    top: -30px;
 }
 
 #plans .tabs button img {

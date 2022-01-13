@@ -40,15 +40,15 @@
             });
 
             $('a#subscribe-basic').on('click', event => {
-                fbq('track', 'Lead', {currency: "COP", value: 80000.00});
+                fbq('track', 'Lead', {content_category: "subscriptions", content_name: "basic", currency: "COP", value: 80000.00});
             });
 
             $('a#subscribe-black').on('click', event => {
-                fbq('track', 'Lead', {currency: "COP", value: 250000.00});
+                fbq('track', 'Lead', {content_category: "subscriptions", content_name: "black", currency: "COP", value: 250000.00});
             });
 
             $('a#subscribe-premium').on('click', event => {
-                fbq('track', 'Lead', {currency: "COP", value: 420000.00});
+                fbq('track', 'Lead', {content_category: "subscriptions", content_name: "premium", currency: "COP", value: 420000.00});
             });
 
             

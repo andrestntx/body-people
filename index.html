@@ -38,6 +38,20 @@
                 $('#premium-content').addClass('active');
                 $('button#premium').addClass('active');
             });
+
+            $('a#subscribe-basic').on('click', event => {
+                fbq('track', 'Lead', {currency: "COP", value: 80000.00});
+            });
+
+            $('a#subscribe-black').on('click', event => {
+                fbq('track', 'Lead', {currency: "COP", value: 250000.00});
+            });
+
+            $('a#subscribe-premium').on('click', event => {
+                fbq('track', 'Lead', {currency: "COP", value: 420000.00});
+            });
+
+            
         });  
     </script>
     <!-- End Plans interaction Code -->
@@ -299,7 +313,7 @@
                         <div class="before"><p>Antes <br><span class="price">$100.000</span></p></div>
                         <div class="now"><span class="price">$80.000</span> /MES</div>
                         <div class="subscribe">
-                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Basic%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank">inscribirme a basic</a>
+                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Basic%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-basic">inscribirme a basic</a>
                             <div class="mark"></div>
                         </div>
                         <ul class="included">
@@ -317,7 +331,7 @@
                         <div class="before"><p>Antes <br><span class="price">$400.000</span></p></div>
                         <div class="now"><span class="price">$250.000</span> /TRIMESTRAL</div>
                         <div class="subscribe">
-                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Black%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank">inscribirme a black</a>
+                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Black%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-black">inscribirme a black</a>
                             <div class="mark"></div>
                         </div>
                         <ul class="included">
@@ -335,7 +349,7 @@
                         <div class="before"><p>Antes <br><span class="price">$800.000</span></p></div>
                         <div class="now"><span class="price">$420.000</span> /SEMESTRAL</div>
                         <div class="subscribe">
-                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Premium%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank">inscribirme a premium</a>
+                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Premium%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-premium">inscribirme a premium</a>
                             <div class="mark"></div>
                         </div>
                         <ul class="included">

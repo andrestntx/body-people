@@ -732,6 +732,7 @@ section#plans::after {
     z-index: 1;
     position: relative;
     text-decoration: none;
+    font-weight: 500;
 }
 
 #plans .content article#black-content .subscribe a {

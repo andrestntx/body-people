@@ -112,6 +112,37 @@
     
 </head>
 <body class="landing-red">
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "345763252226831");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
     <header>
         <div id="brand">
             <img src="./assets/images/svg/lines_behind_logo.svg" class="lines-bg">
@@ -202,7 +233,7 @@
                             </div>
                             <div class="benefit-step-content">
                                 <h2>Quema de grasa</h2>
-                                <p>Con alimentación, circuitos y rutinas de fuerza quemaremos progresivamente la grasa que nos sobra</p>
+                                <p>Con alimentación, circuitos y rutinas de fuerza quemaremos progresivamente grasa localizada</p>
                             </div>
                         </li>
 

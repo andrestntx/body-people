@@ -106,37 +106,42 @@
         src="https://www.facebook.com/tr?id=989182581694959&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     
 </head>
 <body class="landing-red">
     <header>
-        <img src="./assets/images/svg/lines_behind_logo.svg" class="lines-bg">
-        <img id="logo" src="./assets/images/svg/logo_nuevo.svg" alt="Nuevo logo Gimnasio Body People 2022">
-        <section id="social">
-            <a href="https://www.instagram.com/gym.bodypeople/" target="_blank">
-                <img src="./assets/images/svg/instagram_icon.svg" alt="Icono facebook blanco">
-            </a>
-            
-            <a href="https://www.facebook.com/gimnasiobodypeople" target="_blank">
-                <img src="./assets/images/svg/facebook_icon.svg" alt="Icono instagram blanco">
-            </a>
+        <div id="brand">
+            <img src="./assets/images/svg/lines_behind_logo.svg" class="lines-bg">
+            <img id="logo" src="./assets/images/svg/logo_nuevo.svg" alt="Nuevo logo Gimnasio Body People 2022">
+            <section id="social">
+                <a href="https://www.instagram.com/gym.bodypeople/" target="_blank">
+                    <img src="./assets/images/svg/instagram_icon.svg" alt="Icono facebook blanco">
+                </a>
+                
+                <a href="https://www.facebook.com/gimnasiobodypeople" target="_blank">
+                    <img src="./assets/images/svg/facebook_icon.svg" alt="Icono instagram blanco">
+                </a>
 
-        </section>
-    </header>
-    <main>
+            </section>
+        </div>
+        
         <section id="selling">
+            <div class="vineta vineta-start"></div>
             <div class="quote">
-                <h1>Mejora tu <br> estilo de vida <br> <span>sin sufrimiento</span></h1>
+                <h1>El Gimnasio <br> <span>más completo</span> <br> del sector</h1>
+                <img src="./assets/images/amarilo.png" alt="Logo Amarilo Villavicencio">
             </div>
             
-            <div class="hero-image">
-                <img src="./assets/images/web_04.png" alt="Chica entrenando en el gimnasio body people en villavicencio">
-                <img src = "./assets/images/svg/dots_two_lines.svg" class="svg-bg dots"/>
-                <img src = "./assets/images/svg/arrows_red_light.svg" class="svg-bg arrows"/>
-            </div>
-            
-            <h2>Logra <span>grandes resultados</span> con nuestra<br> <span> guía personalizada y acompañamiento </span><br> <span>sin dietas difíciles</span> </h2>
         </section>
+
+        <div class="vineta vineta-end"></div>
+    </header>
+    
+
+    <main>
         <section id="benefits">
             <div id="svg-bg-dots">
 
@@ -349,16 +354,19 @@
             </div>
             <div class="plans-letter">
                 <div class="tabs">
-                    <button id="basic" class="active" >basic <img src="./assets/images/svg/arrow_down_basic_tab_icon.svg" alt=""></button>
-                    <button id="black" >black <img src="./assets/images/svg/arrow_down_black_tab_icon.svg" alt=""></button>
+                    <button id="basic">basic <img src="./assets/images/svg/arrow_down_basic_tab_icon.svg" alt=""></button>
+                    <button id="black" class="active">black <img src="./assets/images/svg/arrow_down_black_tab_icon.svg" alt=""></button>
                     <button id="premium" >premium <img src="./assets/images/svg/arrow_down_premium_tab_icon.svg" alt=""></button>
                 </div>
                 <div class="content">
-                    <article id="basic-content" class="active">
+                    <article id="basic-content">
                         <div class="before"><p>Precio 2022 <br><span class="price">$100.000</span></p></div>
                         <div class="now"><span class="price">$80.000</span> /MES</div>
                         <div class="subscribe">
-                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Basic%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-basic">inscribirme a basic</a>
+                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Basic%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-basic">
+                                <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
+                                <span>inscribirme a basic</span>
+                            </a>
                             <div class="mark"></div>
                         </div>
                         <ul class="included">
@@ -372,11 +380,14 @@
                             <li class="not-included">1 clase personalizada semanal</li>
                         </ul>
                     </article>
-                    <article id="black-content" >
+                    <article id="black-content" class="active">
                         <div class="before"><p>Precio 2022 <br><span class="price">$400.000</span></p></div>
                         <div class="now"><span class="price">$250.000</span> /TRIMESTRAL</div>
                         <div class="subscribe">
-                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Black%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-black">inscribirme a black</a>
+                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Black%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-black">
+                                <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
+                                <span>inscribirme a black</span>
+                            </a>
                             <div class="mark"></div>
                         </div>
                         <ul class="included">
@@ -394,7 +405,10 @@
                         <div class="before"><p>Precio 2022 <br><span class="price">$800.000</span></p></div>
                         <div class="now"><span class="price">$420.000</span> /SEMESTRAL</div>
                         <div class="subscribe">
-                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Premium%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-premium">inscribirme a premium</a>
+                            <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Premium%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-premium">
+                                <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
+                                <span>inscribirme a premium</span>
+                            </a>
                             <div class="mark"></div>
                         </div>
                         <ul class="included">

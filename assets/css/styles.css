@@ -112,10 +112,36 @@ header #brand section#social img {
     flex-wrap: nowrap;
     flex-direction: row;
     margin-block-start: 100px;
+
+    position: relative;
 }
 
 #selling .quote img { 
     block-size: 60px;
+}
+
+#selling .quote .whatsapp-contact {
+    position: absolute;
+    bottom: -35px;
+    left: 40px;
+}
+
+#selling .whatsapp-contact a {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: var(--tertiary-300);
+    font-style: oblique;
+    font-size: 18px;
+    font-weight: 600;
+    background:var(--secondary-200);
+    padding-inline: 15px 20px;
+    border-radius: 0px 0px 10px 10px;
+    align-items: center;
+}
+
+#selling .whatsapp-contact img {
+    block-size: 35px;
 }
 
 #selling h1 {

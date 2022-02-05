@@ -940,10 +940,6 @@ section#gallery p {
         margin:auto;
     }
 
-    main, header {
-        background-color: var(--primary);
-    }
-
     #benefits article::before, 
     #benefits article:nth-child(n + 4)::before,
     #benefits article:last-of-type::after,
@@ -960,3 +956,149 @@ section#gallery p {
         max-inline-size: 325px;
     }
  }
+
+@media (min-width: 800px) {
+    body {
+        max-width: 1024px;
+    }
+
+    main {
+        background-color: var(--tertiary);
+    }
+
+    .section-title h1 {
+        font-size: 32px;
+    }
+
+    #selling {
+        background-image: url('../images/bg_body_people_pc.jpeg');
+    }
+
+    #selling h1 {
+        line-height: 29px;
+        font-size: 25px;
+    }
+
+    #selling .quote img {
+        block-size: 80px;
+    }
+
+    #selling .whatsapp-contact a {
+        font-size: 25px;
+    }
+
+    #selling .whatsapp-contact img {
+        block-size: 40px;
+    }
+
+    #selling .quote .whatsapp-contact {
+        bottom: -40px;
+    }
+
+    #benefits {
+        margin-block-end: 0;
+    }
+
+    #benefits .benefits-title {
+        margin-block-end: 20px;
+    }
+
+    #benefits article::before, #benefits article:nth-child(n + 4)::before, #benefits article:last-of-type::after, section#plans::after {
+        border-left-width: 0;
+        border-right-width: 0;
+    }
+
+    #benefits img.divider {
+        display: none;
+    }
+
+    #benefits .benefits-content {
+        display: flex;
+    }
+
+    #benefits article {
+        background-size: contain;
+    }
+
+    #benefits article .content {
+        padding-inline: 5%;
+    }
+
+    #benefits .benefit-step-content {
+        inline-size: 80%;
+        max-inline-size: auto;
+    }
+
+    #benefits article .content p {
+        padding-inline: 0;
+    }
+
+    section#personal-brand .quote {
+        max-inline-size: 425px;
+    }
+
+    section#gallery {
+        background-color: var(--tertiary);
+        background-image: none;
+        padding-block-start: 0px;
+    }
+
+    #plans .content {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    #plans .content article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 10px;
+        padding-block: 20px 10px;
+        background-color: var(--secondary);
+        inline-size: 30%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #plans .tabs {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #plans .tabs button {
+        inline-size: 32.2%;
+        position: initial;
+    }
+
+    #plans .tabs button.active {
+        inline-size: 32.2%;
+        padding-block-start: 8px;
+        top: -23px;
+    }
+
+    #plans .tabs button.active img {
+        display: none;
+    }
+
+    #plans .content article .subscribe .mark {
+        display: none;
+    }
+
+    #plans .content article .subscribe a {
+        background-image: linear-gradient(to bottom, #fcfcfc, #bebebe);
+        font-size: 15px;
+    }
+
+    #plans .plans-promo .promo-content {
+        font-size: 18px;
+    }
+}

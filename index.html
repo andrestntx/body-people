@@ -51,6 +51,18 @@
                 fbq('track', 'Lead', {content_category: "subscriptions", content_name: "premium", currency: "COP", value: 420000.00});
             });
 
+            $('.period button').on('click',function() {
+                const price = $(this).attr("data-price");
+                const total = $(this).attr("data-total");
+                const target = $(this).attr("data-target");
+
+                $(`${target} .now .price`).html(price);
+                $(`${target} .now.now-period .price`).html(total);
+
+                $(`#plans ${target} .period button`).removeClass('active');
+                $(this).addClass("active");
+            });
+
             
         });  
     </script>
@@ -347,13 +359,13 @@
                 <img src = "./assets/images/svg/red_arrows_down_direction.svg" class="svg-bg arrows"/>
                 
             </div>
-            <div class="plans-promo" style="display: none;">
+            <div class="plans-promo">
                 <div class="promo-content">
-                    <span class="old-price">precios de 2021</span>
+                    <span class="old-price">Promo #Body</span>
                     <div class="promo-title-box">
                         
                     </div>
-                    <span class="eta" id="countdown">10d 12h 50m 43s</span>
+                    <span class="eta" id="countdown" style="display: none;">10d 12h 50m 43s</span>
                 </div>
                 <div class="promo-title">
                    <span>inscripción gratis</span>
@@ -367,8 +379,15 @@
                 </div>
                 <div class="content">
                     <article id="basic-content">
-                        <div class="before"><p>Precio Normal <br><span class="price">$100.000</span></p></div>
-                        <div class="now"><span class="price">$85.000</span> /MES</div>
+                        
+                        <div class="period">
+                            <button data-price="$85.000" data-total="$85.000" data-target="#basic-content">mensual</button>
+                            <button class="active" data-price="$75.000" data-total="$225.000" data-target="#basic-content" >3 meses</button>
+                            <button data-price="$70.000" data-total="$420.000" data-target="#basic-content">6 meses</button>
+                            <button data-price="$60.000" data-total="$720.000" data-target="#basic-content">anual</button>
+                        </div>
+                        <div class="now"><span class="price">$75.000</span> /mes</div>
+                        <div class="now now-period"><span class="price">$225.000</span> total</div>
                         <div class="subscribe">
                             <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Basic%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-basic">
                                 <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
@@ -388,8 +407,11 @@
                         </ul>
                     </article>
                     <article id="black-content" class="active">
-                        <div class="before"><p>Precio Normal <br><span class="price">$400.000</span></p></div>
-                        <div class="now"><span class="price">$280.000</span> /TRIMESTRAL</div>
+                        <div class="period">
+                            <button class="active">3 meses</button>
+                        </div>
+                        <div class="now"><span class="price">$93.300</span> /mes</div>
+                        <div class="now now-period"><span class="price">$280.000</span> total</div>
                         <div class="subscribe">
                             <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Black%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-black">
                                 <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
@@ -409,8 +431,11 @@
                         </ul>
                     </article>
                     <article id="premium-content">
-                        <div class="before"><p>Precio Normal <br><span class="price">$450.000</span></p></div>
-                        <div class="now"><span class="price">$350.000</span> /TRIMESTRAL</div>
+                        <div class="period">
+                            <button class="active">3 meses</button>
+                        </div>
+                        <div class="now"><span class="price">$116.600</span> /mes</div>
+                        <div class="now now-period"><span class="price">$350.000</span> total</div>
                         <div class="subscribe">
                             <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Premium%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-premium">
                                 <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">

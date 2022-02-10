@@ -673,6 +673,7 @@ section#plans::after {
     border-style: solid;
     border-width: 1px;
     font-size: 16px;
+    cursor:pointer;
 }
 
 #plans .tabs button:nth-of-type(1) {
@@ -742,6 +743,7 @@ section#plans::after {
     display: none;
     flex-direction: column;
     align-items: center;
+    padding-block-start: 10px;
 }
 
 #plans .content article.active {
@@ -786,14 +788,28 @@ section#plans::after {
     font-size: 16px;
     font-weight: 400;
     color: var(--tertiary-200);
-    text-transform: uppercase;
-    padding-block-end: 15px;
+    text-transform: lowercase;
+    padding-block-start: 15px;
 }
 
 #plans .content article .now .price {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary);
+}
+
+#plans .content article .now.now-period {
+    font-size: 14px;
+    color: #4a4a4a;
+    font-style: italic;
+    padding-block-start: 5px;
+    padding-block-end: 15px;
+}
+
+#plans .content article .now.now-period .price {
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 500;
 }
 
 #plans .content article .subscribe {
@@ -860,6 +876,34 @@ section#plans::after {
     list-style-image: url('../images/svg/not_included_icon.svg');
     color: var(--tertiary-100);
 }
+
+#plans .period {
+    background-color: var(--tertiary-200);
+    display: flex;
+    border-radius: 20px;
+}
+
+#plans .period button {
+    border-radius: 20px;
+    padding-block: 10px;
+    padding-inline: 15px;
+    border-style: hidden;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-style: oblique;
+}
+
+#plans .period button.active {
+    box-shadow: inset 0px 0px 10px 6px var(--tertiary);
+    font-weight: 600;
+}
+
+#plans .period button {
+    color: var(--secondary);
+    background-color: transparent;
+    cursor:pointer;
+}
+
 
 /*
 Gallery section
@@ -1043,13 +1087,17 @@ section#gallery p {
         padding-block-start: 0px;
     }
 
+    section#plans {
+        padding-inline: 5px;
+    }
+
     #plans .content {
         padding: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-evenly;
         background-color: transparent;
     }
 
@@ -1071,12 +1119,13 @@ section#gallery p {
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     #plans .tabs button {
         inline-size: 32.2%;
         position: initial;
+        cursor:pointer;
     }
 
     #plans .tabs button.active {
@@ -1100,5 +1149,9 @@ section#gallery p {
 
     #plans .plans-promo .promo-content {
         font-size: 18px;
+    }
+
+    #plans .period button {
+        padding-inline: 10px;
     }
 }

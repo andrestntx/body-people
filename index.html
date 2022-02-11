@@ -59,6 +59,11 @@
                 $(`${target} .now .price`).html(price);
                 $(`${target} .now.now-period .price`).html(total);
 
+                $(`${target} .now.now-period`).removeClass("off");  
+                if (total == "") {
+                    $(`${target} .now.now-period`).addClass("off");    
+                }
+
                 $(`#plans ${target} .period button`).removeClass('active');
                 $(this).addClass("active");
             });
@@ -368,7 +373,7 @@
                     <span class="eta" id="countdown" style="display: none;">10d 12h 50m 43s</span>
                 </div>
                 <div class="promo-title">
-                   <span>inscripción gratis</span>
+                   <span>valoración gratis</span>
                 </div>
             </div>
             <div class="plans-letter">
@@ -381,13 +386,13 @@
                     <article id="basic-content">
                         
                         <div class="period">
-                            <button data-price="$85.000" data-total="$85.000" data-target="#basic-content">mensual</button>
-                            <button class="active" data-price="$75.000" data-total="$225.000" data-target="#basic-content" >3 meses</button>
+                            <button class="active" data-price="$85.000" data-total="" data-target="#basic-content">mensual</button>
+                            <button data-price="$75.000" data-total="$225.000" data-target="#basic-content" >3 meses</button>
                             <button data-price="$70.000" data-total="$420.000" data-target="#basic-content">6 meses</button>
                             <button data-price="$60.000" data-total="$720.000" data-target="#basic-content">anual</button>
                         </div>
-                        <div class="now"><span class="price">$75.000</span> /mes</div>
-                        <div class="now now-period"><span class="price">$225.000</span> total</div>
+                        <div class="now"><span class="price">$85.000</span> /mes</div>
+                        <div class="now now-period off"><span class="price">$225.000</span> total</div>
                         <div class="subscribe">
                             <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Basic%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-basic">
                                 <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
@@ -399,7 +404,7 @@
                             <li>Acceso a todas las áreas</li>
                             <li>Clases grupales</li>
                             <li>Acompañamiento de instructores profesionales</li>
-                            <li class="not-included">Valoración inicial</li>
+                            <li>Valoración inicial</li>
                             <li class="not-included">Control mensual</li>
                             <li class="not-included">Plan de entrenamiento</li>
                             <li class="not-included">Plan nutricional</li>
@@ -410,8 +415,7 @@
                         <div class="period">
                             <button class="active">3 meses</button>
                         </div>
-                        <div class="now"><span class="price">$93.300</span> /mes</div>
-                        <div class="now now-period"><span class="price">$280.000</span> total</div>
+                        <div class="now"><span class="price">$280.000</span> /trimestral</div>
                         <div class="subscribe">
                             <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Black%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-black">
                                 <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">
@@ -434,8 +438,7 @@
                         <div class="period">
                             <button class="active">3 meses</button>
                         </div>
-                        <div class="now"><span class="price">$116.600</span> /mes</div>
-                        <div class="now now-period"><span class="price">$350.000</span> total</div>
+                        <div class="now"><span class="price">$350.000</span> /trimestral</div>
                         <div class="subscribe">
                             <a href="https://api.whatsapp.com/send/?phone=573106841279&text=Hola+Body+People%21%0A%0AMe+gustar%C3%ADa+inscribirme+con+el+%2APlan+Premium%2A+%F0%9F%92%AA%F0%9F%8F%BB&app_absent=0" target="_blank" id="subscribe-premium">
                                 <img src="./assets/images/whatsapp.png" alt="Logo de whatsapp">

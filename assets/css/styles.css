@@ -802,9 +802,13 @@ section#plans::after {
     font-size: 14px;
     color: #4a4a4a;
     font-style: italic;
-    padding-block-start: 5px;
-    padding-block-end: 15px;
+    padding-block: 5px;
 }
+
+#plans .content article .now.now-period.off {
+    display: none;
+}
+
 
 #plans .content article .now.now-period .price {
     font-size: 18px;

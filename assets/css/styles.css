@@ -28,11 +28,11 @@ header {
 header #brand {
     block-size: auto;
     padding-block-start: 25px;
-    padding-block-end: 0;
+    padding-block-end: 15px;
     padding-inline: 5%;
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    align-items: center;
     background-color: rgb(31 31 31 / 45%);
 }
 

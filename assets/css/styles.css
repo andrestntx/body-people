@@ -144,12 +144,13 @@ header #brand section#social img {
     block-size: 35px;
 }
 
-#selling h1 {
+#selling h1, #selling .quote h2 {
     text-transform: uppercase;
     line-height: 24px;
     font-size: 20px;
     margin-inline-end: 10px;
     font-style: italic;
+    text-align: left;
 }
 
 #selling h2 {
@@ -174,7 +175,7 @@ header #brand section#social img {
     text-transform: uppercase;
 }
 
-#selling h1 span {
+#selling h1 span, #selling .quote h2 span {
     font-weight: 800;
     font-size: 1.14em;
 }
@@ -1022,7 +1023,7 @@ section#gallery p {
         background-image: url('../images/bg_body_people_pc.jpeg');
     }
 
-    #selling h1 {
+    #selling h1, #selling .quote h2 {
         line-height: 29px;
         font-size: 25px;
     }

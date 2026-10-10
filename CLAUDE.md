@@ -4,8 +4,8 @@
 
 ## Qué es
 
-- gimnasiobodypeople.com: gimnasio de barrio en el sector Amarilo (Villavicencio), atendido por su dueño y
-  entrenador, Mariano Pinzón.
+- gimnasiobodypeople.com: gimnasio de barrio en **San Jorge, Carrera 37 #21A Sur-28** (Villavicencio), atendido
+  por su dueño y entrenador, Mariano Pinzón. Se mudó ahí el 9-oct-2026; antes estaba en el sector Amarilo.
 - **Objetivo de la web:** que la persona escriba por WhatsApp. Mientras el reto está activo, pide un cupo del
   **Reto 30 días**; si no, agenda la **valoración de ingreso gratis**.
 - **Stack:** Astro 7 estático → Vercel (equipo Parceros, plan Pro). Dominio en GoDaddy.

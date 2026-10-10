@@ -1,5 +1,18 @@
 # Pendientes — web nueva de Body People
 
+## Mudanza del 9-oct-2026
+
+El gimnasio pasó a **Carrera 37 #21A Sur-28, barrio San Jorge** (pin 4.103212, -73.6454899), igual que la ficha
+de Google. En la web:
+- `negocio.yml` ahora usa `barrio` en lugar de `sector`. El hero, el título, la descripción, el schema, la
+  sección de horario y el pie salen de ese dato.
+- La imagen para compartir se regeneró con «San Jorge».
+- **Se quitó la foto de la fachada**: era del local anterior. Cuando haya una de la fachada nueva, se vuelve a
+  poner en la sección `#horario`.
+- ⚠️ Las fotos de la galería son del local anterior (una dice «vista desde el segundo piso»). Las comodidades
+  «Parqueadero gratis» y «Entrada accesible» también.
+- ⚠️ El chip «5,0 en Google» quedó viejo: la ficha unida muestra 4,6★ con 43 reseñas.
+
 Actualizado el 15-sep-2026. **La web está publicada en https://gimnasiobodypeople.com** (Vercel), con el
 **Reto 30 días «No hay excusas»** en línea desde el 15-sep (PR #5).
 

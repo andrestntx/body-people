@@ -11,7 +11,7 @@ const { titulo, descripcion, schema } = Astro.props;
 const site = Astro.site!;
 const canonica = new URL(Astro.url.pathname.replace(/index(\.html)?$/, ""), site).href;
 const imagen = new URL("/og-body-people.jpg", site).href;
-const altImagen = `${negocio.nombre}: ${negocio.entrenador.nombre} y el gimnasio en el Amarilo, Villavicencio`;
+const altImagen = `${negocio.nombre}: ${negocio.entrenador.nombre} y el gimnasio en el barrio ${negocio.direccion.barrio}, ${negocio.direccion.ciudad}`;
 ---
 <!doctype html>
 <html lang="es-CO">

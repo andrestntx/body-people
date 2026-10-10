@@ -24,15 +24,16 @@ contacto:
   instagram: https://www.instagram.com/gym.bodypeople/
   facebook: https://www.facebook.com/profile.php?id=61576992184223 # página temporal
 
+# Sede nueva desde el 9-oct-2026 (antes: Carrera del Amor con Calle 10 Sur, sector Amarilo).
 direccion:
-  calle: Carrera del Amor con Calle 10 Sur
-  sector: sector Amarilo
+  calle: "Carrera 37 #21A Sur-28"
+  barrio: San Jorge
   ciudad: Villavicencio
   departamento: Meta
   pais: CO
-  referencia: Cerca de la glorieta de Multifamiliares
-  lat: 4.105504
-  lng: -73.631938
+  referencia: Entre la Calle 21A Sur y la Calle 22 Sur
+  lat: 4.103212
+  lng: -73.6454899
 
 google:
   place_id: ChIJNcEnRtEvPo4RUXIANDDOJVQ

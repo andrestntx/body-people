@@ -10,10 +10,11 @@ import { negocio, pesos } from "../lib/negocio";
 import { schemaGimnasio } from "../lib/schema";
 
 // Title ≤ 60 caracteres y description ≤ 155: lo que Google muestra sin cortar.
-const titulo = "Gimnasio Body People | Gimnasio en el Amarilo, Villavicencio";
+const { barrio, ciudad } = negocio.direccion;
+const titulo = `Gimnasio Body People | Gimnasio en ${barrio}, ${ciudad}`;
 const descripcion = negocio.reto.activo
-  ? `Gimnasio en el sector Amarilo, Villavicencio. ${negocio.reto.nombre}: primer mes por ${pesos(negocio.reto.precio)}, con plan de entrenamiento y acompañamiento de ${negocio.entrenador.nombre}.`
-  : `Gimnasio en el sector Amarilo, Villavicencio. ${negocio.entrenador.nombre} te arma tu plan de entrenamiento y te acompaña. Valoración de ingreso gratis.`;
+  ? `Gimnasio en el barrio ${barrio}, ${ciudad}. ${negocio.reto.nombre}: primer mes por ${pesos(negocio.reto.precio)}, con plan de entrenamiento y acompañamiento de ${negocio.entrenador.nombre}.`
+  : `Gimnasio en el barrio ${barrio}, ${ciudad}. ${negocio.entrenador.nombre} te arma tu plan de entrenamiento y te acompaña. Valoración de ingreso gratis.`;
 ---
 <Base titulo={titulo} descripcion={descripcion} schema={schemaGimnasio(Astro.site!)}>
   <Encabezado />

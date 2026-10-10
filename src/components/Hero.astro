@@ -29,7 +29,7 @@ const { reto, precios, entrenador, google } = negocio;
 
   <div class="hero__texto">
     <h1 id="hero-titulo">
-      <span class="antetitulo">{negocio.nombre} · Amarilo, Villavicencio</span>
+      <span class="antetitulo">{negocio.nombre} · {negocio.direccion.barrio}, {negocio.direccion.ciudad}</span>
       {reto.activo ? "Te reto a empezar. Yo te acompaño." : "Soy Mariano. Te armo tu plan y te acompaño cada mes."}
     </h1>
     <p class="hero__bajada">Soy {entrenador.nombre}, {entrenador.titulo.charAt(0).toLowerCase() + entrenador.titulo.slice(1)}. Te guío desde el primer día para que logres tus objetivos.</p>

@@ -9,7 +9,7 @@ export interface Negocio {
   entrenador: { nombre: string; titulo: string; trayectoria: string };
   contacto: { telefono: string; whatsapp: string; instagram: string; facebook: string };
   direccion: {
-    calle: string; sector: string; ciudad: string; departamento: string; pais: string;
+    calle: string; barrio: string; ciudad: string; departamento: string; pais: string;
     referencia: string; lat: number; lng: number;
   };
   google: { place_id: string; cid: string; enlace_resenas: string; calificacion: string };
@@ -76,7 +76,7 @@ export const franjasTexto = (franjas: Franja[]) => franjas.map(([a, c]) => `${ho
 
 export const direccionCompleta = () => {
   const d = negocio.direccion;
-  return `${d.calle}, ${d.sector}, ${d.ciudad}, ${d.departamento}`;
+  return `${d.calle}, barrio ${d.barrio}, ${d.ciudad}, ${d.departamento}`;
 };
 
 /* ---------- Enlaces ---------- */

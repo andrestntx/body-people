@@ -10,7 +10,6 @@ import {
   negocio, pesos, whatsapp, mensajeObjetivo, MENSAJES, DIAS, franjasTexto,
   direccionCompleta, comoLlegar, mapaFicha, telefonoHref,
 } from "../lib/negocio";
-import fachada from "../assets/fotos/fachada.jpg";
 
 const fotos = import.meta.glob<{ default: ImageMetadata }>("../assets/fotos/*.{jpg,webp}", { eager: true });
 const foto = (n: string) => (fotos[`../assets/fotos/${n}`] ?? fotos[`../assets/fotos/${n}.jpg`]).default;
@@ -200,21 +199,22 @@ const preguntas = [
 
 <!-- Horario y ubicación -->
 <section class="seccion" id="horario" aria-labelledby="horario-titulo">
+  {/* Sin foto de fachada desde la mudanza del 9-oct-2026: la que había era del local anterior. */}
   <div class="contenedor ubicacion">
+    <div class="seccion__cabeza">
+      <p class="antetitulo">Horario y ubicación</p>
+      <h2 id="horario-titulo">Te esperamos en {direccion.barrio}</h2>
+    </div>
+    <table class="horario">
+      <caption class="visualmente-oculto">Horario de atención</caption>
+      <tbody>
+        {filasHorario.map((f) => <tr><th scope="row">{f.dia}</th><td>{franjasTexto(f.franjas)}</td></tr>)}
+      </tbody>
+    </table>
     <div>
-      <div class="seccion__cabeza">
-        <p class="antetitulo">Horario y ubicación</p>
-        <h2 id="horario-titulo">Te esperamos en el Amarilo</h2>
-      </div>
-      <table class="horario">
-        <caption class="visualmente-oculto">Horario de atención</caption>
-        <tbody>
-          {filasHorario.map((f) => <tr><th scope="row">{f.dia}</th><td>{franjasTexto(f.franjas)}</td></tr>)}
-        </tbody>
-      </table>
       <address class="direccion">
         <strong>{direccion.calle}</strong><br />
-        {direccion.sector[0].toUpperCase() + direccion.sector.slice(1)}, {direccion.ciudad}, {direccion.departamento}<br />
+        Barrio {direccion.barrio}, {direccion.ciudad}, {direccion.departamento}<br />
         <span>{direccion.referencia}</span>
       </address>
       <ul class="comodidades">{negocio.comodidades.map((c) => <li>{c}</li>)}</ul>
@@ -224,10 +224,6 @@ const preguntas = [
         <a target="_blank" class="enlace-flecha" href={whatsapp(MENSAJES.horario)} data-intencion="horario" data-ubicacion="horario" rel="noopener">¿Qué horario me recomiendas?</a>
       </div>
     </div>
-    <figure class="fachada">
-      <Picture src={fachada} formats={["avif", "webp"]} widths={[480, 900]} sizes="(min-width: 960px) 520px, 100vw" alt={`Fachada de ${negocio.nombre} en la ${direccion.calle}`} loading="lazy" />
-      <figcaption>Así se ve el local desde la calle.</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -306,7 +302,7 @@ const preguntas = [
   .galeria li { flex: 0 0 82vw; max-width: 420px; scroll-snap-align: start; }
   .galeria :global(img) { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radio); }
 
-  .ubicacion { display: grid; gap: 28px; align-items: start; }
+  .ubicacion { display: grid; align-items: start; }
   .horario { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; margin-bottom: 20px; }
   .horario th, .horario td { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--linea); vertical-align: top; font-size: var(--t-s); }
   .horario th { font-weight: 650; padding-right: 16px; white-space: nowrap; }
@@ -314,9 +310,6 @@ const preguntas = [
   .direccion span { color: var(--tenue); font-size: var(--t-s); }
   .comodidades { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
   .comodidades li { font-size: var(--t-xs); font-weight: 600; padding: 5px 10px; border-radius: 999px; background: var(--papel); box-shadow: 0 0 0 1px var(--linea); }
-  .fachada { margin: 0; }
-  .fachada :global(img) { width: 100%; border-radius: var(--radio); aspect-ratio: 3 / 2; object-fit: cover; }
-  .fachada figcaption { font-size: var(--t-xs); color: var(--tenue); margin-top: 8px; }
 
   .acordeon { border-top: 1px solid var(--linea); }
   .acordeon details { border-bottom: 1px solid var(--linea); }
@@ -346,8 +339,10 @@ const preguntas = [
       max-width: var(--ancho); margin-inline: auto; padding: 0 var(--gutter);
     }
     .galeria li { max-width: none; }
-    .ubicacion { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 72px; }
-    .fachada :global(img) { aspect-ratio: 4 / 3; }
+    /* Horario a la izquierda; dirección, comodidades y botones a la derecha. */
+    .ubicacion { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); column-gap: 72px; }
+    .ubicacion > .seccion__cabeza { grid-column: 1 / -1; }
+    .ubicacion .horario { margin-bottom: 0; }
     .cierre__caja { grid-template-columns: 1fr auto; align-items: center; column-gap: 40px; }
     .cierre__caja .boton { grid-column: 2; grid-row: 1 / span 2; }
     .cierre h2 { font-size: 2.75rem; }

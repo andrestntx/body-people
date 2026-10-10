@@ -51,10 +51,10 @@ export function schemaGimnasio(site: URL) {
     telephone: n.contacto.telefono,
     image: [new URL("/og-body-people.jpg", site).href],
     logo: new URL("/apple-touch-icon.png", site).href,
-    description: `Gimnasio en el ${n.direccion.sector} de ${n.direccion.ciudad}. ${n.entrenador.nombre} (${n.entrenador.titulo}) arma tu plan de entrenamiento y controla tu progreso cada mes.`,
+    description: `Gimnasio en el barrio ${n.direccion.barrio} de ${n.direccion.ciudad}. ${n.entrenador.nombre} (${n.entrenador.titulo}) arma tu plan de entrenamiento y controla tu progreso cada mes.`,
     address: {
       "@type": "PostalAddress",
-      streetAddress: `${n.direccion.calle}, ${n.direccion.sector}`,
+      streetAddress: `${n.direccion.calle}, barrio ${n.direccion.barrio}`,
       addressLocality: n.direccion.ciudad,
       addressRegion: n.direccion.departamento,
       addressCountry: n.direccion.pais,
